@@ -9,12 +9,16 @@
             const int Part_Time = 2;
             int empWage = 0;
             const int Rate_Per_Hour = 20;
-            const int EmployeeWagesPerMonth = 20;
+            const int Max_Working_Days = 20;
+            const int Max_Working_Hours = 100;
             int totalEmployeeWage = 0;
+            int totalWorkingHours = 0;
+            int day = 1;
+            
             int empHrs = 0;
             Random random = new Random();
             int randomInput=random.Next(0,3);
-            for (int day = 1; day <= EmployeeWagesPerMonth; day++)
+            while (day <= Max_Working_Days && totalWorkingHours < Max_Working_Hours) 
             {
                 switch (randomInput)
                 {
@@ -27,10 +31,12 @@
                 empWage = empHrs * Rate_Per_Hour;
                 Console.WriteLine("Employee Wage  Day {0}: {1}", day, empWage);
                 totalEmployeeWage += empWage;
+                totalWorkingHours += empHrs;
+                day++;
             }
-            
-            Console.WriteLine("total employee wage per month="+totalEmployeeWage);
-            
+
+            Console.WriteLine("Employee Wage for {0} Days  {1} Hours  {2}",totalEmployeeWage, day - 1, totalWorkingHours);
+
 
         }
 
