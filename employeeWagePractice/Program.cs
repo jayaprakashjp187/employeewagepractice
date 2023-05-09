@@ -12,23 +12,14 @@
             int empHrs = 0;
             Random random = new Random();
             int randomInput=random.Next(0,3);
-            if(Full_Time==randomInput)
+            switch(randomInput)
             {
-                empHrs = 8;
-                Console.WriteLine("employee is Present");
-               
-            }
-            else if(Part_Time==randomInput)
-            {
-                empHrs = 4;
-                Console.WriteLine("part time employee is present");
-                
-            }
-            else
-            {
-                Console.WriteLine("employee is absent");
+                case Full_Time: empHrs = 8; break;
+                case Part_Time: empHrs = 4; break;
+                default: empHrs = 0; break;
 
             }
+       
             empWage = empHrs*Rate_Per_Hour;
             Console.WriteLine(empWage);
             
