@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace employeeWagePractice
 {
-    internal class EmployeeWageBuilder
+    internal class EmployeeWageBuilder : ComputeEmpWage
     {
 
         private EmployeeDetails[] companyEmpWages;

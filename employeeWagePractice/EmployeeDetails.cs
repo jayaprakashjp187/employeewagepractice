@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace employeeWagePractice
 {
+    interface ComputeEmpWage
+    {
+    void AddCompanyEmpWage(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours);
+    void ComputeEmpWage();
+    }
     internal class EmployeeDetails
     {
         public string CompanyName { get; }
