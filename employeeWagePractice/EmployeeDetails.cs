@@ -8,10 +8,18 @@ namespace employeeWagePractice
 {
     internal class EmployeeDetails
     {
-        public string CompanyName { get; set; }
-        public int ratePerHour { get; set; }
-        public int maxWorkingDaysInAmonth { get; set; }
-        public int maxWorkingHours { get; set; }
-     
+        public string CompanyName { get; }
+        public int WagePerHour { get; }
+        public int MaxWorkingDays { get; }
+        public int MaxWorkingHours { get; }
+
+        public EmployeeDetails(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours)
+        {
+            CompanyName = companyName;
+            WagePerHour = wagePerHour;
+            MaxWorkingDays = maxWorkingDays;
+            MaxWorkingHours = maxWorkingHours;
+        }
+
     }
 }

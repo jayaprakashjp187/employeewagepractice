@@ -5,13 +5,11 @@
         static void Main(string[] args)
         {
             Console.WriteLine("welcomes to the employeeWage calculations !");
-            
-            List<EmployeWage> e=new List<EmployeWage> ();
-           
 
-            EmployeWage.CalculateEmployeeWage();
-           // EmployeWage.CalculateEmployeeWage();
-           // EmployeWage.CalculateEmployeeWage();
+            EmployeeWageBuilder empWageBuilder = new EmployeeWageBuilder();
+            empWageBuilder.AddCompanyEmpWage("Infosys", 20, 20, 100);
+            empWageBuilder.AddCompanyEmpWage("Tcs B", 25, 22, 110);
+            empWageBuilder.ComputeEmpWage();
 
         }
 
